@@ -1,30 +1,29 @@
-import os 
+import os
 
 def processar_resposta(resposta, nome):
     if resposta == '1':
-        print(f'{os.linesep}{nome} Vale muito a pena aprender Python, pois e uma das linguagens que mais cresce atualmente{os.linesep}')
+        print(f'{os.linesep}{nome} Vale muito a pena aprender Python, pois é uma das linguagens que mais cresce atualmente.{os.linesep}')
     elif resposta == '2':
-        print(f'{os.linesep}{nome} A media salarial de um programador Python e em torno de R$150.000.00 por ano.{os.linesep}')
+        print(f'{os.linesep}{nome} A média salarial de um programador Python é em torno de R$150.000,00 por ano.{os.linesep}')
     elif resposta == '3':
-        print(f'{os.linesep}{nome} pra se torna um cientista de dados voce precisa estudar alguns temas que sao muito relevantes para a profissão.\n E preciso se dedicar e estar sempre em busca de novos conhecimentos. \nUma forma de aprimorar  seus conhecimentos e aprender muita coisa legal e se inscrever no Canal NERD DOS DADOS, \nporque e um canal que traz conteudos atualizados toda semana. \nEntao se inscreve aqui no canal e ative as noticaçoes pra sempre ficar por dentro das novidades.{os.linesep} ')
+        print(f'{os.linesep}{nome}, para se tornar um cientista de dados, você precisa estudar alguns temas que são muito relevantes para a profissão.\nÉ preciso se dedicar e estar sempre em busca de novos conhecimentos.\nUma forma de aprimorar seus conhecimentos é aprender muita coisa legal e se inscrever no Canal NERD DOS DADOS,\nporque é um canal que traz conteúdos atualizados toda semana.\nEntão se inscreva aqui no canal e ative as notificações para sempre ficar por dentro das novidades.{os.linesep}')
     else:
-        print('Digite apenas as opçoes 1, 2, ou 3')
+        print('Digite apenas as opções 1, 2 ou 3')
 
-    def start():
-        #Apresentar o chatbot
-        print('Ola, bem vindo ao Bot Nerd dos Dados')
+def start():
+    # Apresentar o chatbot
+    print('Olá, bem vindo ao Bot Nerd dos Dados')
 
-        #Pedir o nome
-        nome = input('Digite seu nome: ')
+    # Pedir o nome
+    nome = input('Digite seu nome: ')
 
-        while True:
+    while True:
+        # Oferecer um menu de opções
+        resposta = input(
+            f'O que gostaria de saber hoje? {os.linesep}[1] - Vale a pena aprender Python? {os.linesep}[2] - Qual a média salarial de um profissional que trabalha com Python? {os.linesep}[3] - E como eu faço para me tornar um cientista de dados? {os.linesep}')
 
-            #Oferecer um menu de opçoes 
-            resposta = input(
-                f'O que gostaria de saber hoje? {os.linesep}[1] - Vale a pena aprender Python? {os.linesep}[2] -Qual a media salarial de um profissional que trabalha com Python? {os.linesep}[3] - E como eu faço pra me torna um cientista de dados? {os.linesep}')
+        # Processar a resposta enviada
+        processar_resposta(resposta, nome)
 
-            # Processar a resposta enviada
-            processar_resposta(resposta, nome) 
-
-    if __name__=='__main__': 
-        start() 
+if __name__ == '__main__':
+    start()
