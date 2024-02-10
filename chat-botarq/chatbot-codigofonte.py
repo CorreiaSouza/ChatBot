@@ -12,7 +12,7 @@ def processar_resposta(resposta, nome):
 
 def start():
     # Apresentar o chatbot
-    print('Olá, bem vindo ao Bot Nerd dos Dados')
+    print('Olá, bem vindo ao Bot Nerd dos Dados o que ')
 
     # Pedir o nome
     nome = input('Digite seu nome: ')
